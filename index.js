@@ -62,17 +62,37 @@ function init(){
 
 
 
-    mesh = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({
-
-        color: 0x0094ff,
-
-        transparent: true,
-
-        opacity: 0.5
-
-    }));
-
-    scene.add(mesh);
+// Instantiate a loader
+	var loader = new THREE.GLTFLoader();
+	
+	// Load a glTF resource
+	loader.load(
+		// resource URL
+		'busterDrone/busterDrone.gltf',
+		// called when the resource is loaded
+		function ( gltf ) {
+	
+			scene.add( gltf.scene );
+	
+			gltf.animations; // Array<THREE.AnimationClip>
+			gltf.scene; // THREE.Scene
+			gltf.scenes; // Array<THREE.Scene>
+			gltf.cameras; // Array<THREE.Camera>
+	
+		},
+		// called when loading is in progresses
+		function ( xhr ) {
+	
+			console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+	
+		},
+		// called when loading has errors
+		function ( error ) {
+	
+			console.log( 'An error happened' );
+	
+		}
+	);
 
 
 
