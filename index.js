@@ -64,7 +64,7 @@ function init(){
 
     mesh = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({
 
-        color: 0xFF00FF,
+        color: 0x0094ff,
 
         transparent: true,
 
