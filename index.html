@@ -10,7 +10,7 @@
 
 
 
-<script src="https://raw.githubusercontent.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.js"> </script>
+<script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.js"> </script>
 
 
 
@@ -82,7 +82,15 @@
 
 
 
-       
+       <a-assets>
+
+
+
+
+
+
+
+    <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
 
 
 
@@ -92,22 +100,37 @@
 
 
 
-  	 <a-marker-camera preset='custom' type='pattern' url='patterns/monroe.patt'>
+
+
+  </a-assets>
 
 
 
 
 
 
-      	<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-
-
-  	
-
-  	</a-marker-camera>
 
 
 
+
+
+  	<a-marker preset="hiro">       
+
+
+
+
+
+
+
+      <a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
+
+
+
+  	</a-marker>
+
+
+
+  	<a-entity camera></a-entity>
 
 
 
