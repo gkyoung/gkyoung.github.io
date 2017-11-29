@@ -73,72 +73,14 @@
 
 
   
-
-  <body style='margin : 0px; overflow: hidden;'>
-
-
-
-    <a-scene embedded arjs>
-
-
-
-       <a-assets>
-
-
-
-
-
-
-
-    <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
-
-
-
-
-
-
-
-
-
-
-
-  </a-assets>
-
-
-
-
-
-
-
-
-
-
-
-  	<a-marker preset="hiro">       
-
-
-
-
-
-
-
-      <a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
-
-
-
-  	</a-marker>
-
-
-
-  	<a-entity camera></a-entity>
-
-
-
-    </a-scene>
-
-
-
-  </body>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+    <!-- create your content here. just a box for now -->
+    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker-camera preset='custom' type='pattern' url='patterns/monroe.patt'></a-marker-camera>
+  </a-scene>
+</body>
 
 
 
