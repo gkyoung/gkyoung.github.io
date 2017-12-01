@@ -7,8 +7,7 @@ var arSource,
     arContext,
     arMarker = [];
 
-var 
-    mesh;
+
 
 init();
 
@@ -30,12 +29,7 @@ function init(){
     scene.visible = false;
 
 
-    mesh = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({
-        color: 0xFF00FF,
-        transparent: true,
-        opacity: 0.5
-    }));
-    scene.add(mesh);
+    
 
 
 
