@@ -50,12 +50,6 @@ function init(){
         detectionMode: 'mono',
     });
 
-    arMarker[0] = new THREEx.ArMarkerControls(arContext, camera, {
-        type : 'pattern',
-        patternUrl : './assets/data/patt.hiro',
-        changeMatrixMode: 'cameraTransformMatrix'
-    });
-
     arMarker[1] = new THREEx.ArMarkerControls(arContext, camera, {
         type : 'pattern',
         patternUrl : 'patterns/monroe.patt',
