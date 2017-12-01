@@ -93,6 +93,5 @@ function render(){
     scene.visible = camera.visible;
 
 
-    mesh.rotateX(.1);
 
 }          
