@@ -1,99 +1,115 @@
-var renderer,
-    scene,
-    camera,
-    container;
-
-var arSource,
-    arContext,
-    arMarker = [];
-
-var 
-    mesh;
-
 init();
 
-function init(){
+render();
+
+/* --------------------------------------------- */
 
 
 
-    container = document.getElementById('container');
+var skinA = {},
 
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    scene = new THREE.Scene();
-    camera = new THREE.Camera();
+    skinB = {},
 
-    renderer.setClearColor(0x000000, 0);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    loader,
 
-    container.appendChild(renderer.domElement);
-    scene.add(camera);
-    scene.visible = false;
-
-
-    mesh = new THREE.Mesh(new THREE.BoxGeometry(1,1,1), new THREE.MeshBasicMaterial({
-        color: 0xFF00FF,
-        transparent: true,
-        opacity: 0.5
-    }));
-    scene.add(mesh);
+    clock;
 
 
 
+loader();
 
 
-    arSource = new THREEx.ArToolkitSource({
-        sourceType : 'webcam',
-    });
 
-    arContext = new THREEx.ArToolkitContext({
-        cameraParametersUrl: './assets/data/camera_para.dat',
-        detectionMode: 'mono',
-    });
+function loader(){
 
 
-    arMarker[1] = new THREEx.ArMarkerControls(arContext, camera, {
-        type : 'pattern',
-        patternUrl : 'patterns/monroe.patt',
-        changeMatrixMode: 'cameraTransformMatrix'
-    });
+
+    loader = new THREE.JSONLoader();
+
+    clock = new THREE.Clock;
 
 
 
 
 
-    /* handle */
-    arSource.init(function(){
-        arSource.onResize();
-        arSource.copySizeTo(renderer.domElement);
+    var light = new THREE.HemisphereLight(0xFFFFFF, 0x003300, 1);
 
-        if(arContext.arController !== null) arSource.copySizeTo(arContext.arController.canvas);
+    scene.add(light);
 
-    });
 
-    arContext.init(function onCompleted(){
+
+    loader.load('assets/knight.js', function (geometry, materials){
+
+        for(var i in materials) materials[i].skinning = true;
+
+
+
+        skinA.root = new THREE.SkinnedMesh(geometry, materials);
+
+        scene.add(skinA.root);
+
+        skinA.mixer = new THREE.AnimationMixer(skinA.root);
+
+        skinA.mixer.clipAction(skinA.root.geometry.animations[0]).play();
+
         
-        camera.projectionMatrix.copy(arContext.getProjectionMatrix());
+
+        skinB.root = new THREE.SkinnedMesh(geometry, materials);
+
+        scene.add(skinB.root);
+
+        skinB.mixer = new THREE.AnimationMixer(skinB.root);
+
+        skinB.mixer.clipAction(skinB.root.geometry.animations[0]).play();
+
+
+
+        skinA.root.scale.set(0.15, 0.15, 0.15);
+
+        skinB.root.scale.set(0.15, 0.15, 0.15);
+
+
+
+        skinA.root.position.set( 1, 0,0);
+
+        skinB.root.position.set(-1, 0,0);
+
+
+
+        skinA.root.rotateY(-Math.PI/2);
+
+        skinB.root.rotateY(Math.PI/2);
 
     });
 
 
-    render();   
-    
-}   
 
+}
 
 
 
 function render(){
+
     requestAnimationFrame(render);
-    renderer.render(scene,camera);                
+
+    renderer.render(scene,camera);
 
     if(arSource.ready === false) return;
 
     arContext.update(arSource.domElement);
+
     scene.visible = camera.visible;
 
+    /* --------------------------------------------- */
 
-    mesh.rotateX(.1);
+
+
+
+
+    if(skinA.mixer) skinA.mixer.update(clock.getDelta());
+
+    if(skinB.mixer) skinB.mixer.update(.05);
+
+    
 
 }          
