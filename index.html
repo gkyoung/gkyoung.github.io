@@ -1,14 +1,45 @@
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
-    <script src="https://rawgit.com/wimvdc/ar.js/patch-1/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body>
-    <a-scene embedded artoolkit="sourceType: webcam" vr-mode-ui="enabled: false" arjs="trackingMethod: best; debugUIEnabled: false;">
-      <a-marker type='pattern' url='patterns/monroe.patt'>
-        <a-box position='0 0.5 0' material='color: #fff; opacity: 0.5'></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+
+    <head>
+
+        <title> Greg's Page </title>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>        
+
+        <script src="aframe/build/ar.min.js"></script>
+
+        <script src="aframe/build/three.js"></script>
+
+        <script src="aframe/build/GLTFLoader.js"></script>
+
+        <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js"></script>
+
+
+
+    </head>
+
+    <body>
+
+
+
+        <div id="container"></div>
+
+
+
+        <script src="index.js"></script>
+
+        
+
+    </body>
+
 </html>
