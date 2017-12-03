@@ -62,13 +62,53 @@
 
      
 
+       <a-assets>
 
 
 
-<a-marker type='pattern' url= 'patterns/monroe.patt'>       
 
-<a-entity gltf-model-next="src: busterDrone/busterDrone.gltf;"
-          animation-mixer="clip: Run;"></a-entity>
+
+
+
+
+
+
+
+
+
+
+
+    <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </a-assets>
+
+
+
+<a-marker type='pattern' url= 'patterns/monroe.patt'>     
+  
+<a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
 
 
 
