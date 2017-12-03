@@ -38,7 +38,7 @@ function loader(){
 
 
 
-    loader.load('assets/knight.js', function (geometry, materials){
+    loader.load('https://raw.githubusercontent.com/u4bi-git/arjs-3dmodel-loader-test/master/assets/model/knight/knight.js', function (geometry, materials){
 
         for(var i in materials) materials[i].skinning = true;
 
