@@ -1,20 +1,80 @@
 <!doctype HTML>
 
+
+
+
+
+
+
 <html>
 
 
-<script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe.min.js"></script>
 
-<script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.js"></script>
+
+
+
+
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+
+
+
+
+
+
+
+<script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.js"> </script>
+
+
+
+
+
+
 
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js"></script>
+
+
 
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 
 
 
-<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+
+
+
+
+
+
+
+
 
 
 
@@ -30,7 +90,23 @@
 
 
 
+
+
+
+
+
+
+
+
     display: none;
+
+
+
+
+
+
+
+
 
 
 
@@ -42,7 +118,27 @@
 
 
 
-</style>
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+
+
+
+
+
+
 
 
 
@@ -52,7 +148,13 @@
 
   
 
+
+
   <body style='margin : 0px; overflow: hidden;'>
+
+
+
+
 
 
 
@@ -60,7 +162,9 @@
 
 
 
-     
+
+
+
 
        <a-assets>
 
@@ -78,7 +182,7 @@
 
 
 
-     <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
+    <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
 
 
 
@@ -106,9 +210,46 @@
 
 
 
-<a-marker type='pattern' url= 'patterns/monroe.patt'>     
-  
-<a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	<a-marker type='pattern' url= 'patterns/monroe.patt'>       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
+
+
+
 
 
 
@@ -117,7 +258,15 @@
 
 
 
+
+
+
+
   	<a-entity camera></a-entity>
+
+
+
+
 
 
 
@@ -125,7 +274,15 @@
 
 
 
+
+
+
+
   </body>
+
+
+
+
 
 
 
