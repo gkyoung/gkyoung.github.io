@@ -11,7 +11,11 @@
 <script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.js"></script>
 
 <script src="https://cdn.rawgit.com/gkyoung/gkyoung.github.io/master/aframe/build/aframe-ar.min.js"></script>    
-    <style>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.10.0/dist/aframe-extras.min.js"></script>
+
+
+
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 
 
@@ -25,7 +29,38 @@
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   #arjsDebugUIContainer {
@@ -77,17 +112,159 @@
 
 
   </style>
-<body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs>
-    <!-- create your content here. just a box for now -->
-     <a-anchor hit-testing-enabled='true'>
-   		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-      </a-anchor>
-    <!-- define a camera which will move according to the marker position -->
-    <a-marker type='pattern' url= 'patterns/monroe.patt'> </a-marker>
-      <a-entity camera></a-entity>
-  </a-scene>
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <body style='margin : 0px; overflow: hidden;'>
+
+
+
+
+
+
+
+    <a-scene embedded arjs>
+
+
+
+
+
+
+
+       <a-assets>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a-asset-item id="mesh1" src="busterDrone/busterDrone.gltf"></a-asset-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </a-assets>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	<a-marker type='pattern' url= 'patterns/monroe.patt'>       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <a-entity gltf-model-next="#mesh1" animation-mixer="clip: busterDrone; loop:repeat"></a-entity>
+
+
+
+
+
+
+
+  	</a-marker>
+
+
+
+
+
+
+
+  	<a-entity camera></a-entity>
+
+
+
+
+
+
+
+    </a-scene>
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
 
 
 </html>
