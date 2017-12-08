@@ -1,5 +1,6 @@
 
-var renderer, scene, camera, container;
+var renderer, scene, camera, container, clock, 
+animMixers = [];
 
 var arSource, arContext, arMarker;
 
@@ -19,7 +20,11 @@ function init(){
 
     camera = new THREE.Camera();
 
-    
+    clock = new THREE.Clock;
+    var light = new THREE.HemisphereLight(0xFFFFFF, 0x003300, 1);
+
+    scene.add(light);
+
 
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -37,17 +42,18 @@ function init(){
 
     arContext = new THREEx.ArToolkitContext({ cameraParametersUrl: 'assets/data/camera_para.dat', detectionMode: 'mono', });
 
-    arMarker = new THREEx.ArMarkerControls(arContext, camera, { type : 'pattern', patternUrl : 'patterns/monroe.patt', changeMatrixMode: 'cameraTransformMatrix' });
+   // arMarker = new THREEx.ArMarkerControls(arContext, camera, { type : 'pattern', patternUrl : 'patterns/monroe.patt', changeMatrixMode: 'cameraTransformMatrix' });
+    arMarker = new THREEx.ArMarkerControls(arContext, camera, { type : 'pattern', patternUrl : 'patterns/pattern-marker.patt', changeMatrixMode: 'cameraTransformMatrix' });
 
     
 
     arSource.init(function(){
 
-        arSource.onResize();
+        arSource.onResizeElement();
 
-        arSource.copySizeTo(renderer.domElement);
+        arSource.copyElementSizeTo(renderer.domElement);
 
-        if(arContext.arController !== null) arSource.copySizeTo(arContext.arController.canvas);
+        if(arContext.arController !== null) arSource.copyElementSizeTo(arContext.arController.canvas);
 
     });
 
@@ -60,5 +66,5 @@ function init(){
     });
 
 
-
+    render();
 }
