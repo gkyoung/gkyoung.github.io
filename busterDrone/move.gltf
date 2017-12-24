@@ -1,0 +1,355 @@
+{
+    "accessors": [
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 250,
+            "max": [
+                10.374999999999988
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_SphereAction_time_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 250,
+            "max": [
+                0,
+                0,
+                0.4415220320224762
+            ],
+            "min": [
+                0.0,
+                -0.5342375636100769,
+                0.0
+            ],
+            "name": "accessor_buffer_Sphere_SphereAction_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1984,
+            "max": [
+                1.000000238418579,
+                0.9999991655349731,
+                1.0
+            ],
+            "min": [
+                -0.9999998211860657,
+                -1.0000003576278687,
+                -1.0
+            ],
+            "name": "accessor_buffer_Sphere_POSITION_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 2880,
+            "max": [
+                1983
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_Sphere_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 250,
+            "max": [
+                0.42475906014442444,
+                0.42475906014442444,
+                0.42475903034210205
+            ],
+            "min": [
+                0.42475900053977966,
+                0.42475900053977966,
+                0.42475903034210205
+            ],
+            "name": "accessor_buffer_Sphere_SphereAction_2",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1984,
+            "max": [
+                0.9904382824897766,
+                0.9904387593269348,
+                0.9951386451721191
+            ],
+            "min": [
+                -0.9904382824897766,
+                -0.9904382824897766,
+                -0.9951385259628296
+            ],
+            "name": "accessor_buffer_Sphere_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1984,
+            "max": [
+                1.4049780368804932,
+                0.97664475440979
+            ],
+            "min": [
+                0.0010155439376831055,
+                0.023355424404144287
+            ],
+            "name": "accessor_buffer_Sphere_TEXCOORD_0_0",
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 250,
+            "max": [
+                0,
+                0,
+                0.5121402740478516,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                0.858901858329773
+            ],
+            "name": "accessor_buffer_Sphere_SphereAction_1",
+            "type": "VEC4"
+        }
+    ],
+    "animations": [
+        {
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 1,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 1,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 2,
+                    "target": {
+                        "node": 1,
+                        "path": "scale"
+                    }
+                }
+            ],
+            "name": "SphereAction",
+            "samplers": [
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 1
+                },
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 7
+                },
+                {
+                    "input": 0,
+                    "interpolation": "LINEAR",
+                    "output": 4
+                }
+            ]
+        }
+    ],
+    "asset": {
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 23808,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Sphere_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 23808,
+            "byteOffset": 23808,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Sphere_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 15872,
+            "byteOffset": 47616,
+            "byteStride": 8,
+            "name": "bufferView_buffer_Sphere_TEXCOORD_0_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 5760,
+            "byteOffset": 63488,
+            "name": "bufferView_buffer_Sphere_0",
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1000,
+            "byteOffset": 69248,
+            "byteStride": 4,
+            "name": "bufferView_buffer_SphereAction_time_0"
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3000,
+            "byteOffset": 70248,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Sphere_SphereAction_0"
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4000,
+            "byteOffset": 73248,
+            "byteStride": 16,
+            "name": "bufferView_buffer_Sphere_SphereAction_1"
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3000,
+            "byteOffset": 77248,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Sphere_SphereAction_2"
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 80248,
+            "name": "buffer_move",
+            "uri": "buffer_move.bin"
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Sphere",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 5,
+                        "POSITION": 2,
+                        "TEXCOORD_0": 6
+                    },
+                    "indices": 3,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Lamp",
+            "rotation": [
+                0.16907575726509094,
+                0.27217137813568115,
+                0.7558802962303162,
+                0.570947527885437
+            ],
+            "scale": [
+                1.0,
+                0.9999999403953552,
+                1.0
+            ],
+            "translation": [
+                4.076245307922363,
+                1.0054539442062378,
+                5.903861999511719
+            ]
+        },
+        {
+            "mesh": 0,
+            "name": "Sphere",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                0.42475903034210205,
+                0.42475903034210205,
+                0.42475903034210205
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "children": [
+                1,
+                0
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Scene_root"
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "name": "Scene",
+            "nodes": [
+                2
+            ]
+        }
+    ]
+}
