@@ -1,0 +1,239 @@
+{
+    "accessors": [
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 30514,
+            "max": [
+                0.9999355673789978,
+                0.9990856051445007,
+                0.9999573230743408
+            ],
+            "min": [
+                -0.9999797940254211,
+                -0.9999378323554993,
+                -0.9999226331710815
+            ],
+            "name": "accessor_buffer_walnut_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 180000,
+            "max": [
+                30513
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_walnut_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 30514,
+            "max": [
+                0.9927098155021667,
+                0.9961447499226779
+            ],
+            "min": [
+                0.00390625,
+                0.004808783531188965
+            ],
+            "name": "accessor_buffer_walnut_TEXCOORD_0_0",
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 30514,
+            "max": [
+                0.9624085426330566,
+                0.5132455825805664,
+                16.60118293762207
+            ],
+            "min": [
+                -0.21463613212108612,
+                -0.879622220993042,
+                15.272777557373047
+            ],
+            "name": "accessor_buffer_walnut_POSITION_0",
+            "type": "VEC3"
+        }
+    ],
+    "asset": {
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 366168,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_walnut_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 366168,
+            "byteOffset": 366168,
+            "byteStride": 12,
+            "name": "bufferView_buffer_walnut_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 244112,
+            "byteOffset": 732336,
+            "byteStride": 8,
+            "name": "bufferView_buffer_walnut_TEXCOORD_0_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 360000,
+            "byteOffset": 976448,
+            "name": "bufferView_buffer_walnut_0",
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 1336448,
+            "name": "buffer_nut",
+            "uri": "buffer_nut.bin"
+        }
+    ],
+    "images": [
+        {
+            "name": "walnut.jpg",
+            "uri": "walnut.jpg"
+        }
+    ],
+    "materials": [
+        {
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "walnut",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0,
+                    "texCoord": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "walnut",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 0,
+                        "POSITION": 3,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 1,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "walnut",
+            "rotation": [
+                0.7070922255516052,
+                0.00454205647110939,
+                0.004542055539786816,
+                0.7070921659469604
+            ],
+            "scale": [
+                0.6494333744049072,
+                0.6494333744049072,
+                0.6494333744049072
+            ],
+            "translation": [
+                0.12294553965330124,
+                10.245368003845215,
+                0.5411607623100281
+            ]
+        },
+        {
+            "children": [
+                0
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Scene_root"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "name": "Kd",
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "name": "Scene",
+            "nodes": [
+                1
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "name": "Kd",
+            "sampler": 0,
+            "source": 0
+        }
+    ]
+}
