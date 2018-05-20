@@ -1,0 +1,167 @@
+{
+    "accessors": [
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 275532,
+            "max": [
+                0.9999803900718689,
+                0.9999191761016846,
+                0.9999967217445374
+            ],
+            "min": [
+                -0.999992847442627,
+                -0.9999997019767761,
+                -0.9999985098838806
+            ],
+            "name": "accessor_buffer_ZBrushPolyMesh3D_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 275532,
+            "max": [
+                275531
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_ZBrushPolyMesh3D_0",
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 275532,
+            "max": [
+                0.5827791690826416,
+                0.9527005553245544,
+                0.3491934537887573
+            ],
+            "min": [
+                -0.6152709722518921,
+                -2.020909070968628,
+                -0.8228490352630615
+            ],
+            "name": "accessor_buffer_ZBrushPolyMesh3D_POSITION_0",
+            "type": "VEC3"
+        }
+    ],
+    "asset": {
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 3306384,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_ZBrushPolyMesh3D_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 3306384,
+            "byteOffset": 3306384,
+            "byteStride": 12,
+            "name": "bufferView_buffer_ZBrushPolyMesh3D_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 1102128,
+            "byteOffset": 6612768,
+            "name": "bufferView_buffer_ZBrushPolyMesh3D_0",
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 7714896,
+            "name": "buffer_body",
+            "uri": "buffer_body.bin"
+        }
+    ],
+    "meshes": [
+        {
+            "name": "ZBrushPolyMesh3D",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 0,
+                        "POSITION": 2
+                    },
+                    "indices": 1,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "ZBrushPolyMesh3D",
+            "rotation": [
+                0.05960054323077202,
+                0.0,
+                0.0,
+                0.9982224106788635
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.5354150533676147,
+                0.6304305791854858
+            ]
+        },
+        {
+            "children": [
+                0
+            ],
+            "matrix": [
+                -1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Scene_root"
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24
+            },
+            "name": "Scene",
+            "nodes": [
+                1
+            ]
+        }
+    ]
+}
